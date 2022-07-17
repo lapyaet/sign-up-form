@@ -1,0 +1,199 @@
+@import url(./reset.css);
+
+.form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__container {
+    width: 820px;
+    height: auto;
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 4px 40px rgb(43 89 255 / 8%)
+}
+
+.form__container-left {
+    width: 50%;
+    height: auto;
+    background-image: url(./photos/top-view-pack-of-eggs-with-brush-paint-and-decora-2021-08-31-13-35-57-utc\ \(1\).jpg);
+    background-size: cover;
+    background-position: left;
+    display: block;
+}
+
+.form__container-left-item {
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__container-left-item h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form__container-left-item h1 span {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #f07167;
+}
+
+.form__container-right {
+    width: 50%;
+    padding: 1rem 2rem;
+}
+
+.form__container-right h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form__container-right-item {
+    position: relative;
+    height: 40px;
+    margin-bottom: 1.5rem;
+}
+
+.form__input {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid #DADCE0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+}
+
+.form__label {
+    position: absolute;
+    top: 0.45rem;
+    left: 1rem;
+    color: #80868B;
+    background-color: #ffff;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.form__input:focus + .form__label {
+    top: -0.55rem;
+    left: 0.8rem;
+    font-size: 0.75rem;
+    color: #1A73E8;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+    top: -0.55rem;
+    left: 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.form__input:focus {
+    border: 1.5px solid #1A73E8;
+}
+
+.checkbox__container {
+    display: flex;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.checkbox__container label {
+    color: #80868B;
+}
+
+.checkbox__container label p a {
+    color: #1A73E8;
+    font-weight: 500;
+}
+
+.form__btn {
+    width: 100%;
+    background-color: #adb5bd !important;
+    color: #fff;
+    padding: 0.7rem 0;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.check {
+    position: absolute;
+    right: 1rem;
+    bottom: -1rem;
+    font-size: 0.75rem;
+    color: #ef233c;
+    font-weight: 500;
+}
+
+.color {
+    background-color: #1A73E8 !important;
+}
+
+@media (min-width:0) and (max-width:600px) {
+    .form {
+        background-image: url(./photos/top-view-pack-of-eggs-with-brush-paint-and-decora-2021-08-31-13-35-57-utc\ \(1\).jpg);
+        background-size: cover;
+        background-position: right;
+    }
+
+    .form__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background: rgba(0,0,0,0.2);
+    }
+
+    .form__container-left{
+        display: none;
+    }
+
+    .form__container-right {
+        width: 80%;
+        margin: auto;
+        background: rgba(0,0,0,0.8);
+        border-radius: 8px;
+        z-index: 0;
+    }
+
+    .form__container-right h1 {
+        color: #fff;
+    }
+
+    .form__input {
+        color: #fff;
+    }
+
+    .form__label {
+        background: rgba(0,0,0,0.5);
+        color: #DADCE0;
+    }
+
+    .form__input:focus + .form__label {
+        top: -0.45rem;
+    }
+
+    .form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+        top: -0.45rem;
+    }
+}
